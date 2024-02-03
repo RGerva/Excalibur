@@ -1,5 +1,8 @@
 package com.excaliburmod.excalibur_mod;
 
+import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
+import com.excaliburmod.excalibur_mod.creative.ExcaliburCreativeModTabs;
+import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import com.mojang.authlib.GameProfile;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -37,6 +40,9 @@ public class Excalibur_Mod
 
         IEventBus modEventBus= FMLJavaModLoadingContext.get().getModEventBus();
 
+        ExcaliburCreativeModTabs.register(modEventBus);//Creative
+        ExcaliburItems.register(modEventBus);//Items
+        ExcaliburBlocks.register(modEventBus);//Blocks
 
         modEventBus.addListener(this::commonSetup);
 
@@ -49,7 +55,9 @@ public class Excalibur_Mod
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ExcaliburItems.SAPPHIRE);
+        }
     }
 
     @SubscribeEvent

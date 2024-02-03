@@ -1,0 +1,54 @@
+package com.excaliburmod.excalibur_mod.datagen;
+
+import com.excaliburmod.excalibur_mod.Excalibur_Mod;
+import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
+import com.excaliburmod.excalibur_mod.util.ExcaliburTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.BlockTagsProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModBlockTagGenerator extends BlockTagsProvider {
+    public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, Excalibur_Mod.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider pProvider) {
+        //CUSTOM TAGS E FORGE ORE TAGS
+
+//        this.tag(ExcaliburTags.Blocks.METAL_DETECTOR_VALUABELS)
+//                .add(ExcaliburBlocks.SAPPHIRE_ORE.get()).addTag(Tags.Blocks.ORES);
+
+        //VANILLA TOOLS
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE);
+
+        this.tag(BlockTags.MINEABLE_WITH_HOE);
+
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL);
+
+
+        //VANILLA TOOLS TYPE
+        this.tag(BlockTags.NEEDS_STONE_TOOL);
+
+        this.tag(BlockTags.NEEDS_IRON_TOOL);
+
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
+        this.tag(BlockTags.FENCES);
+
+        this.tag(BlockTags.FENCE_GATES);
+
+        this.tag(BlockTags.WALLS);
+
+    }
+}
