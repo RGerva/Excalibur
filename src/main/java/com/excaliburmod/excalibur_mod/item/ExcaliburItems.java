@@ -31,4 +31,6 @@ public class ExcaliburItems {
             () -> new ShovelItem(ExcaliburToolTiers.SAPPHIRE, 1,0, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
             () -> new HoeItem(ExcaliburToolTiers.SAPPHIRE, 0,0, new Item.Properties()));
+
+    public static final RegistryObject<Item> SAPPHIRE_SMITHING = ITEMS.register("sapphire_upgrade_smithing_template", () -> ExcaliburSmithingItem.createSapphireUpgradeTemplate());
 }

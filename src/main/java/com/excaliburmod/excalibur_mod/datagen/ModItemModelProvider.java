@@ -49,6 +49,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ExcaliburItems.SAPPHIRE_AXE);
         handheldItem(ExcaliburItems.SAPPHIRE_SHOVEL);
         handheldItem(ExcaliburItems.SAPPHIRE_HOE);
+
+        handheldItem(ExcaliburItems.SAPPHIRE_SMITHING);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

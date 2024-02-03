@@ -1,7 +1,8 @@
-// 1.20.1	2024-02-03T13:43:35.6142645	Item Models: excalibur_mod
+// 1.20.1	2024-02-03T14:19:28.3507686	Item Models: excalibur_mod
 bd1046abf15112b1e93f35fe7a64ef890b64d838 assets/excalibur_mod/models/item/sapphire.json
 248c0aa12a29415b29da33db13e98daa9e238dc3 assets/excalibur_mod/models/item/sapphire_axe.json
 9dddd4155077b64580aa49d8a7b6b41c93879acf assets/excalibur_mod/models/item/sapphire_hoe.json
 02b44e16f6fb1ee9a8b02a8bbd633fe74a94edcd assets/excalibur_mod/models/item/sapphire_pickaxe.json
 f8987baf73bf88d716d27e3abc1da343b96126c9 assets/excalibur_mod/models/item/sapphire_shovel.json
 b4e070a6b21c3761de2f673b4c5211f9ade1b368 assets/excalibur_mod/models/item/sapphire_sword.json
+e9b7bf97d2803d1575ed00f66d471f46f154c3c4 assets/excalibur_mod/models/item/sapphire_upgrade_smithing_template.json

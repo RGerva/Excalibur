@@ -27,6 +27,8 @@ public class ExcaliburCreativeModTabs {
                         pOutput.accept(ExcaliburItems.SAPPHIRE_AXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_PICKAXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SHOVEL.get());
+
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_SMITHING.get());
                     })
                     .build());
 

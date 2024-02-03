@@ -6,5 +6,9 @@
   "item.excalibur_mod.sapphire_axe": "Sapphire Axe",
   "item.excalibur_mod.sapphire_hoe": "Sapphire Hoe",
 
+  "upgrade.excalibur_mod.sapphire_upgrade": "Sapphire Upgrade",
+  "item.excalibur_mod.smithing_template.sapphire_upgrade.applies_to": "Netherite Equipment",
+  "item.excalibur_mod.smithing_template.sapphire_upgrade.ingredients": "Sapphire",
+
   "creativetab.excalibur_tab" : "Excalibur"
 }
