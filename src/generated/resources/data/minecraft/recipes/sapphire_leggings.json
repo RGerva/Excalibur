@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "excalibur_mod:sapphire"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "result": {
+    "item": "excalibur_mod:sapphire_leggings"
+  },
+  "template": {
+    "item": "excalibur_mod:sapphire_upgrade_smithing_template"
+  }
+}

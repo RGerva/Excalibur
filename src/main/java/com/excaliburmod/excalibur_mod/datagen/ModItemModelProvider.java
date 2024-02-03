@@ -43,6 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ExcaliburItems.SAPPHIRE);
+        simpleItem(ExcaliburItems.RAW_SAPPHIRE);
 
         handheldItem(ExcaliburItems.SAPPHIRE_SWORD);
         handheldItem(ExcaliburItems.SAPPHIRE_PICKAXE);
@@ -51,6 +52,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ExcaliburItems.SAPPHIRE_HOE);
 
         handheldItem(ExcaliburItems.SAPPHIRE_SMITHING);
+
+        trimmedArmorItem(ExcaliburItems.SAPPHIRE_HELMET);
+        trimmedArmorItem(ExcaliburItems.SAPPHIRE_CHESTPLATE);
+        trimmedArmorItem(ExcaliburItems.SAPPHIRE_LEGGINGS);
+        trimmedArmorItem(ExcaliburItems.SAPPHIRE_BOOTS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

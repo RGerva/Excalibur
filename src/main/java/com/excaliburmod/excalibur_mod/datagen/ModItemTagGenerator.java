@@ -19,7 +19,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(ItemTags.TRIMMABLE_ARMOR);
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ExcaliburItems.SAPPHIRE_HELMET.get())
+                .add(ExcaliburItems.SAPPHIRE_CHESTPLATE.get())
+                .add(ExcaliburItems.SAPPHIRE_LEGGINGS.get())
+                .add(ExcaliburItems.SAPPHIRE_BOOTS.get());
 
         this.tag(ItemTags.MUSIC_DISCS);
 

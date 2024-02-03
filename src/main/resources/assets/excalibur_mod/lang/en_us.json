@@ -1,5 +1,14 @@
 {
   "item.excalibur_mod.sapphire": "Sapphire",
+  "item.excalibur_mod.raw_sapphire": "Raw Sapphire",
+
+  "block.excalibur_mod.sapphire_block": "Block of Sapphire",
+  "block.excalibur_mod.raw_sapphire_block": "Block of Raw Sapphire",
+
+  "block.excalibur_mod.sapphire_ore": "Sapphire Ore",
+  "block.excalibur_mod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.excalibur_mod.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+  "block.excalibur_mod.nether_sapphire_ore": "Nether Sapphire Ore",
 
   "item.excalibur_mod.sapphire_sword": "Sapphire Sword",
   "item.excalibur_mod.sapphire_pickaxe": "Sapphire Pickaxe",
@@ -9,6 +18,11 @@
   "upgrade.excalibur_mod.sapphire_upgrade": "Sapphire Upgrade",
   "item.excalibur_mod.smithing_template.sapphire_upgrade.applies_to": "Netherite Equipment",
   "item.excalibur_mod.smithing_template.sapphire_upgrade.ingredients": "Sapphire",
+
+  "item.excalibur_mod.sapphire_helmet": "Sapphire Helmet",
+  "item.excalibur_mod.sapphire_chestplate": "Sapphire Chestplate",
+  "item.excalibur_mod.sapphire_leggings": "Sapphire Legging",
+  "item.excalibur_mod.sapphire_boots": "Sapphire Boots",
 
   "creativetab.excalibur_tab" : "Excalibur"
 }

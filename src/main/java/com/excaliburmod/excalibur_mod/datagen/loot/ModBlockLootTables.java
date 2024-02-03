@@ -26,7 +26,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        //PROPRIO DROP
+        this.dropSelf(ExcaliburBlocks.SAPPHIRE_BLOCK.get());
+        this.dropSelf(ExcaliburBlocks.RAW_SAPPHIRE_BLOCK.get());
+
+        this.add(ExcaliburBlocks.SAPPHIRE_ORE.get(),
+                block -> createCustomSapphireOreDrops(ExcaliburBlocks.SAPPHIRE_ORE.get(), ExcaliburItems.RAW_SAPPHIRE.get(), 2.0F,5.0F));
+
+        this.add(ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
+                block -> createCustomSapphireOreDrops(ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), ExcaliburItems.RAW_SAPPHIRE.get(), 2.0F, 5.0F));
+
+        this.add(ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get(),
+                block -> createCustomSapphireOreDrops(ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get(), ExcaliburItems.RAW_SAPPHIRE.get(), 0.3F, 0.7F));
+
+        this.add(ExcaliburBlocks.END_SAPPHIRE_ORE.get(),
+                block -> createCustomSapphireOreDrops(ExcaliburBlocks.END_SAPPHIRE_ORE.get(),ExcaliburItems.RAW_SAPPHIRE.get(), 0.5F, 10.0F));
+
 
     }
 

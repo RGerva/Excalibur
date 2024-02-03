@@ -1,6 +1,8 @@
 package com.excaliburmod.excalibur_mod.item;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
+import com.excaliburmod.excalibur_mod.item.armor.ExcaliburArmorMaterials;
+import com.excaliburmod.excalibur_mod.item.templates.ExcaliburSmithingItem;
 import com.excaliburmod.excalibur_mod.item.tools.ExcaliburToolTiers;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,6 +21,8 @@ public class ExcaliburItems {
     //SAPPHIRE ITEMS
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
+            () -> new Item(new Item.Properties()));
 
     //TOOLS
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
@@ -32,5 +36,16 @@ public class ExcaliburItems {
     public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
             () -> new HoeItem(ExcaliburToolTiers.SAPPHIRE, 0,0, new Item.Properties()));
 
+    //TEMPLATE
     public static final RegistryObject<Item> SAPPHIRE_SMITHING = ITEMS.register("sapphire_upgrade_smithing_template", () -> ExcaliburSmithingItem.createSapphireUpgradeTemplate());
+
+    //ARMOR
+    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
+            () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE_HELMET, ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
+            () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE_CHESTPLATE, ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
+            () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE_LEGGING, ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
+            () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE_BOOT, ArmorItem.Type.BOOTS,new Item.Properties()));
 }

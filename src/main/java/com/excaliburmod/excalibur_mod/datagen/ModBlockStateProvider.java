@@ -21,7 +21,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ExcaliburBlocks.SAPPHIRE_BLOCK);
+        blockWithItem(ExcaliburBlocks.RAW_SAPPHIRE_BLOCK);
 
+        blockWithItem(ExcaliburBlocks.SAPPHIRE_ORE);
+        blockWithItem(ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE);
+        blockWithItem(ExcaliburBlocks.NETHER_SAPPHIRE_ORE);
+        blockWithItem(ExcaliburBlocks.END_SAPPHIRE_ORE);
     }
 
 

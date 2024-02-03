@@ -1,3 +1,8 @@
 {
-  "values": []
+  "values": [
+    "excalibur_mod:sapphire_helmet",
+    "excalibur_mod:sapphire_chestplate",
+    "excalibur_mod:sapphire_leggings",
+    "excalibur_mod:sapphire_boots"
+  ]
 }

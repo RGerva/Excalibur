@@ -1,6 +1,7 @@
 package com.excaliburmod.excalibur_mod.creative;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
+import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -20,13 +21,27 @@ public class ExcaliburCreativeModTabs {
                     .title(Component.translatable("creativetab.excalibur_tab"))
                     .displayItems((pParameters,pOutput) -> {
                         pOutput.accept(ExcaliburItems.SAPPHIRE.get());
+                        pOutput.accept(ExcaliburItems.RAW_SAPPHIRE.get());
 
+                        pOutput.accept(ExcaliburBlocks.SAPPHIRE_BLOCK.get());
+                        pOutput.accept(ExcaliburBlocks.RAW_SAPPHIRE_BLOCK.get());
+
+                        pOutput.accept(ExcaliburBlocks.SAPPHIRE_ORE.get());
+                        pOutput.accept(ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
+                        pOutput.accept(ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get());
+                        pOutput.accept(ExcaliburBlocks.END_SAPPHIRE_ORE.get());
 
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SWORD.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_PICKAXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_AXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_PICKAXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SHOVEL.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_HOE.get());
+
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_HELMET.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_CHESTPLATE.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_LEGGINGS.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_BOOTS.get());
 
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SMITHING.get());
                     })

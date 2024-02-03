@@ -1,4 +1,4 @@
-package com.excaliburmod.excalibur_mod.item;
+package com.excaliburmod.excalibur_mod.item.templates;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
 import net.minecraft.ChatFormatting;

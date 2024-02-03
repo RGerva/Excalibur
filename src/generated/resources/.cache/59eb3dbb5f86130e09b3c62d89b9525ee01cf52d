@@ -1,1 +1,7 @@
-// 1.20.1	2024-02-03T13:24:41.6077761	Loot Tables
+// 1.20.1	2024-02-03T14:43:15.981976	Loot Tables
+8fb4697361e8e7997a36542feecf0efa53f78a96 data/excalibur_mod/loot_tables/blocks/deepslate_sapphire_ore.json
+8c54c89c9396b67f013a99d9cb3fc9ce3b93217c data/excalibur_mod/loot_tables/blocks/end_stone_sapphire_ore.json
+78850dc15ec360702b122542a65fc6808f1a7432 data/excalibur_mod/loot_tables/blocks/nether_sapphire_ore.json
+8da4c7a7f5abdec6523aa1cbb16a2fa47e73f778 data/excalibur_mod/loot_tables/blocks/raw_sapphire_block.json
+40275e9e9416637e8931475265085eda3341a7ac data/excalibur_mod/loot_tables/blocks/sapphire_block.json
+a785433daffbedb3f8214dcc6cea5a795ccf38b7 data/excalibur_mod/loot_tables/blocks/sapphire_ore.json
