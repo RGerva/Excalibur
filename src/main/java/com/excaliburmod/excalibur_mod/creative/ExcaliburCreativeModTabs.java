@@ -16,10 +16,17 @@ public class ExcaliburCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> EXCALIBUR_TAB = CREATIVE_MODE_TABS.register("excalibur_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ExcaliburItems.SAPPHIRE.get()))
+                    .icon(() -> new ItemStack(ExcaliburItems.SAPPHIRE_SWORD.get()))
                     .title(Component.translatable("creativetab.excalibur_tab"))
                     .displayItems((pParameters,pOutput) -> {
                         pOutput.accept(ExcaliburItems.SAPPHIRE.get());
+
+
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_SWORD.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_PICKAXE.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_AXE.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_PICKAXE.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_SHOVEL.get());
                     })
                     .build());
 

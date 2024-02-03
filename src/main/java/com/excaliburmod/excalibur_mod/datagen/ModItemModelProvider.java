@@ -43,6 +43,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ExcaliburItems.SAPPHIRE);
+
+        handheldItem(ExcaliburItems.SAPPHIRE_SWORD);
+        handheldItem(ExcaliburItems.SAPPHIRE_PICKAXE);
+        handheldItem(ExcaliburItems.SAPPHIRE_AXE);
+        handheldItem(ExcaliburItems.SAPPHIRE_SHOVEL);
+        handheldItem(ExcaliburItems.SAPPHIRE_HOE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

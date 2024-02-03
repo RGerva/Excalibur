@@ -23,6 +23,50 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
+        //SAPPHIRE PICKAXE
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(new ItemLike[]{Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE}),
+                        Ingredient.of(Items.NETHERITE_PICKAXE),
+                        Ingredient.of(ExcaliburItems.SAPPHIRE.get()),
+                        RecipeCategory.MISC,
+                        ExcaliburItems.SAPPHIRE_PICKAXE.get())
+                .unlocks(getHasName(ExcaliburItems.SAPPHIRE_PICKAXE.get()), has(ExcaliburItems.SAPPHIRE_PICKAXE.get()))
+                .save(pWriter, getItemName(ExcaliburItems.SAPPHIRE_PICKAXE.get()));
+
+        //SAPPHIRE SWORD
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(new ItemLike[]{Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE}),
+                        Ingredient.of(Items.NETHERITE_SWORD),
+                        Ingredient.of(ExcaliburItems.SAPPHIRE.get()),
+                        RecipeCategory.MISC,
+                        ExcaliburItems.SAPPHIRE_SWORD.get())
+                .unlocks(getHasName(ExcaliburItems.SAPPHIRE_SWORD.get()), has(ExcaliburItems.SAPPHIRE_SWORD.get()))
+                .save(pWriter, getItemName(ExcaliburItems.SAPPHIRE_SWORD.get()));
+
+        //SAPPHIRE AXE
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(new ItemLike[]{Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE}),
+                        Ingredient.of(Items.NETHERITE_AXE),
+                        Ingredient.of(ExcaliburItems.SAPPHIRE.get()),
+                        RecipeCategory.MISC,
+                        ExcaliburItems.SAPPHIRE_AXE.get())
+                .unlocks(getHasName(ExcaliburItems.SAPPHIRE_AXE.get()), has(ExcaliburItems.SAPPHIRE_AXE.get()))
+                .save(pWriter, getItemName(ExcaliburItems.SAPPHIRE_AXE.get()));
+
+        //SAPPHIRE SHOEVEL
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(new ItemLike[]{Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE}),
+                        Ingredient.of(Items.NETHERITE_SHOVEL),
+                        Ingredient.of(ExcaliburItems.SAPPHIRE.get()),
+                        RecipeCategory.MISC,
+                        ExcaliburItems.SAPPHIRE_SHOVEL.get())
+                .unlocks(getHasName(ExcaliburItems.SAPPHIRE_SHOVEL.get()), has(ExcaliburItems.SAPPHIRE_SHOVEL.get()))
+                .save(pWriter, getItemName(ExcaliburItems.SAPPHIRE_SHOVEL.get()));
+
+        //SAPPHIRE HOE
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(new ItemLike[]{Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE}),
+                        Ingredient.of(Items.NETHERITE_HOE),
+                        Ingredient.of(ExcaliburItems.SAPPHIRE.get()),
+                        RecipeCategory.MISC,
+                        ExcaliburItems.SAPPHIRE_HOE.get())
+                .unlocks(getHasName(ExcaliburItems.SAPPHIRE_HOE.get()), has(ExcaliburItems.SAPPHIRE_HOE.get()))
+                .save(pWriter, getItemName(ExcaliburItems.SAPPHIRE_HOE.get()));
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

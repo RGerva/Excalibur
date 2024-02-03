@@ -1,1 +1,11 @@
-// 1.20.1	2024-02-03T13:24:41.6087728	Recipes
+// 1.20.1	2024-02-03T13:47:42.8524558	Recipes
+23562501cc9894403232e57b2db7a851d46327ee data/minecraft/advancements/recipes/misc/sapphire_axe.json
+a3ee1b23d9845daf835b04e5e800ecbbf59370ad data/minecraft/advancements/recipes/misc/sapphire_hoe.json
+444a7a52d7ff202e9430a6fa42f1591c9d1f5ade data/minecraft/advancements/recipes/misc/sapphire_pickaxe.json
+ee6b28792c7c8cce0b3387a96abfd4a2a00f1143 data/minecraft/advancements/recipes/misc/sapphire_shovel.json
+20c3d6c161a1f5c7fbacfe20c560cf43ec752163 data/minecraft/advancements/recipes/misc/sapphire_sword.json
+019028fd5447800928bb14a7de0cf91b04e68ff8 data/minecraft/recipes/sapphire_axe.json
+826648af78270e4b23826dde1deb354d9737b8df data/minecraft/recipes/sapphire_hoe.json
+53a48f3d0314296835dec35d286ced262d4cb9ab data/minecraft/recipes/sapphire_pickaxe.json
+d2d4a8f3abfd01f74166ed195572ef9a29d638e8 data/minecraft/recipes/sapphire_shovel.json
+fbfc26ec216edc64739f1b87cf9d92cb6cbe720d data/minecraft/recipes/sapphire_sword.json

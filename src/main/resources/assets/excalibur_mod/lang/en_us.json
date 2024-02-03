@@ -1,7 +1,10 @@
 {
   "item.excalibur_mod.sapphire": "Sapphire",
 
-
+  "item.excalibur_mod.sapphire_sword": "Sapphire Sword",
+  "item.excalibur_mod.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.excalibur_mod.sapphire_axe": "Sapphire Axe",
+  "item.excalibur_mod.sapphire_hoe": "Sapphire Hoe",
 
   "creativetab.excalibur_tab" : "Excalibur"
 }

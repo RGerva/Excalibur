@@ -1,7 +1,8 @@
 package com.excaliburmod.excalibur_mod.item;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
-import net.minecraft.world.item.Item;
+import com.excaliburmod.excalibur_mod.item.tools.ExcaliburToolTiers;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,7 +16,19 @@ public class ExcaliburItems {
         ITEMS.register(eventBus);
     }
 
-
+    //SAPPHIRE ITEMS
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
             () -> new Item(new Item.Properties()));
+
+    //TOOLS
+    public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
+            () -> new SwordItem(ExcaliburToolTiers.SAPPHIRE, 8,1, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
+            () -> new PickaxeItem(ExcaliburToolTiers.SAPPHIRE, 4,0.9f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe",
+            () -> new AxeItem(ExcaliburToolTiers.SAPPHIRE, 7,0.8f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel",
+            () -> new ShovelItem(ExcaliburToolTiers.SAPPHIRE, 1,0, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
+            () -> new HoeItem(ExcaliburToolTiers.SAPPHIRE, 0,0, new Item.Properties()));
 }
