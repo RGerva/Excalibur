@@ -21,7 +21,12 @@ public class ExcaliburCreativeModTabs {
                     .title(Component.translatable("creativetab.excalibur_tab"))
                     .displayItems((pParameters,pOutput) -> {
                         pOutput.accept(ExcaliburItems.SAPPHIRE.get());
+                        pOutput.accept(ExcaliburItems.RUBY.get());
+                        pOutput.accept(ExcaliburItems.ZIRCON.get());
+
                         pOutput.accept(ExcaliburItems.RAW_SAPPHIRE.get());
+                        pOutput.accept(ExcaliburItems.RAW_RUBY.get());
+                        pOutput.accept(ExcaliburItems.RAW_ZIRCON.get());
 
                         pOutput.accept(ExcaliburItems.IRON_METAL_DETECTOR.get());
                         pOutput.accept(ExcaliburItems.DIAMOND_METAL_DETECTOR.get());

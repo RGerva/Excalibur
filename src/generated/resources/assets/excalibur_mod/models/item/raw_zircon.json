@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "excalibur_mod:item/raw_zircon"
+  }
+}

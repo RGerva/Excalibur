@@ -1,8 +1,11 @@
-// 1.20.1	2024-02-04T19:31:57.8229127	Item Models: excalibur_mod
+// 1.20.1	2024-02-04T20:01:36.716809	Item Models: excalibur_mod
 24f70a8d888607def30d2df086ff632104b9cba5 assets/excalibur_mod/models/item/diamond_metal_detector.json
 5ff73cb2d4061d437ad721008e42b04252b7a192 assets/excalibur_mod/models/item/iron_metal_detector.json
 ec706d12f8b295a8b0f3477e516ffe89ffdf9e0e assets/excalibur_mod/models/item/netherite_metal_detector.json
+57724729bde786c3ad193262f2ab83da47752c36 assets/excalibur_mod/models/item/raw_ruby.json
 5db501ee411b6d5025db54a6e11cd5bee970468f assets/excalibur_mod/models/item/raw_sapphire.json
+d60e045c22675d4966f0a15dd286b83d38ad8fd3 assets/excalibur_mod/models/item/raw_zircon.json
+c9fd70ae24b303750fda069d2b18b17ef31226c0 assets/excalibur_mod/models/item/ruby.json
 bd1046abf15112b1e93f35fe7a64ef890b64d838 assets/excalibur_mod/models/item/sapphire.json
 248c0aa12a29415b29da33db13e98daa9e238dc3 assets/excalibur_mod/models/item/sapphire_axe.json
 181055d4f2bbc48c3b33666758e963ab4cce928a assets/excalibur_mod/models/item/sapphire_boots.json
@@ -55,3 +58,4 @@ f42c5d6df1fa22ba53de5fc155b9afce019b81df assets/excalibur_mod/models/item/sapphi
 f8987baf73bf88d716d27e3abc1da343b96126c9 assets/excalibur_mod/models/item/sapphire_shovel.json
 b4e070a6b21c3761de2f673b4c5211f9ade1b368 assets/excalibur_mod/models/item/sapphire_sword.json
 e9b7bf97d2803d1575ed00f66d471f46f154c3c4 assets/excalibur_mod/models/item/sapphire_upgrade_smithing_template.json
+588aa94dd8f9d85d3b33f51c4e535efd86a768d4 assets/excalibur_mod/models/item/zircon.json

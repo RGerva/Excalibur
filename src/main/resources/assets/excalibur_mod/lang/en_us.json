@@ -1,6 +1,11 @@
 {
   "item.excalibur_mod.sapphire": "Sapphire",
+  "item.excalibur_mod.ruby": "Ruby",
+  "item.excalibur_mod.zircon": "Zircon",
+
   "item.excalibur_mod.raw_sapphire": "Raw Sapphire",
+  "item.excalibur_mod.raw_ruby": "Raw Ruby",
+  "item.excalibur_mod.raw_zircon": "Raw Zircon",
 
   "item.excalibur_mod.iron_metal_detector": "Iron Metal Detector",
   "item.excalibur_mod.diamond_metal_detector": "Diamond Metal Detector",
