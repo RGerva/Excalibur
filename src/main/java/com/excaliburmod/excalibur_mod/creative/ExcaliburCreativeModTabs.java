@@ -17,11 +17,16 @@ public class ExcaliburCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> EXCALIBUR_TAB = CREATIVE_MODE_TABS.register("excalibur_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ExcaliburItems.SAPPHIRE_SWORD.get()))
+                    .icon(() -> new ItemStack(ExcaliburItems.EXCALIBUR_SWORD.get()))
                     .title(Component.translatable("creativetab.excalibur_tab"))
                     .displayItems((pParameters,pOutput) -> {
                         pOutput.accept(ExcaliburItems.SAPPHIRE.get());
                         pOutput.accept(ExcaliburItems.RAW_SAPPHIRE.get());
+
+                        pOutput.accept(ExcaliburItems.IRON_METAL_DETECTOR.get());
+                        pOutput.accept(ExcaliburItems.DIAMOND_METAL_DETECTOR.get());
+                        pOutput.accept(ExcaliburItems.NETEHRITE_METAL_DETECTOR.get());
+                        pOutput.accept(ExcaliburItems.SAPPHIRE_METAL_DETECTOR.get());
 
                         pOutput.accept(ExcaliburBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ExcaliburBlocks.RAW_SAPPHIRE_BLOCK.get());
@@ -44,6 +49,9 @@ public class ExcaliburCreativeModTabs {
                         pOutput.accept(ExcaliburItems.SAPPHIRE_BOOTS.get());
 
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SMITHING.get());
+
+                        pOutput.accept(ExcaliburItems.EXCALIBUR_SWORD.get());
+
                     })
                     .build());
 

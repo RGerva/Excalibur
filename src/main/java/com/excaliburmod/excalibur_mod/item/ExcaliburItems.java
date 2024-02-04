@@ -2,13 +2,20 @@ package com.excaliburmod.excalibur_mod.item;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
 import com.excaliburmod.excalibur_mod.item.armor.ExcaliburArmorMaterials;
+import com.excaliburmod.excalibur_mod.item.detector.MetalDetectorItem;
 import com.excaliburmod.excalibur_mod.item.templates.ExcaliburSmithingItem;
 import com.excaliburmod.excalibur_mod.item.tools.ExcaliburToolTiers;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.server.command.TextComponentHelper;
+
+import java.util.List;
 
 public class ExcaliburItems {
     //REGISTER
@@ -23,6 +30,17 @@ public class ExcaliburItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
+
+    //DETECTOR
+
+    public static final RegistryObject<Item> IRON_METAL_DETECTOR = ITEMS.register("iron_metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(50)));
+    public static final RegistryObject<Item> DIAMOND_METAL_DETECTOR = ITEMS.register("diamond_metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(100)));
+    public static final RegistryObject<Item> NETEHRITE_METAL_DETECTOR = ITEMS.register("netherite_metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(150)));
+    public static final RegistryObject<Item> SAPPHIRE_METAL_DETECTOR = ITEMS.register("sapphire_metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties()));
 
     //TOOLS
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
@@ -48,4 +66,26 @@ public class ExcaliburItems {
             () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE_LEGGING, ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
             () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE_BOOT, ArmorItem.Type.BOOTS,new Item.Properties()));
+
+
+
+    public static final RegistryObject<SwordItem> EXCALIBUR_SWORD = ITEMS.register("excalibur_sword",
+            () -> new SwordItem(ExcaliburToolTiers.EXCALIBUR_TIER,20,8f,
+                    new Item.Properties().fireResistant().rarity(Rarity.EPIC)) {
+        @Override
+        public boolean isEnchantable(ItemStack stack) {
+            return true;
+        }
+        @Override
+        public boolean canBeDepleted() {
+            return false;
+        }
+        @Override
+        public void appendHoverText(ItemStack stack, Level worldIn, List<Component> tooltip, TooltipFlag flagIn){
+            tooltip.add(TextComponentHelper.createComponentTranslation(null,"indestructible" , new Object()).withStyle(ChatFormatting.BLUE));
+
+            super.appendHoverText(stack, worldIn, tooltip, flagIn);
+        }
+
+    });
 }

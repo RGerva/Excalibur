@@ -56,6 +56,7 @@ public class Excalibur_Mod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ExcaliburItems.EXCALIBUR_SWORD);
             event.accept(ExcaliburItems.SAPPHIRE);
         }
     }

@@ -28,6 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE);
         blockWithItem(ExcaliburBlocks.NETHER_SAPPHIRE_ORE);
         blockWithItem(ExcaliburBlocks.END_SAPPHIRE_ORE);
+
     }
 
 

@@ -53,10 +53,16 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ExcaliburItems.SAPPHIRE_SMITHING);
 
+        handheldItem(ExcaliburItems.IRON_METAL_DETECTOR);
+        handheldItem(ExcaliburItems.DIAMOND_METAL_DETECTOR);
+        handheldItem(ExcaliburItems.NETEHRITE_METAL_DETECTOR);
+        handheldItem(ExcaliburItems.SAPPHIRE_METAL_DETECTOR);
+
         trimmedArmorItem(ExcaliburItems.SAPPHIRE_HELMET);
         trimmedArmorItem(ExcaliburItems.SAPPHIRE_CHESTPLATE);
         trimmedArmorItem(ExcaliburItems.SAPPHIRE_LEGGINGS);
         trimmedArmorItem(ExcaliburItems.SAPPHIRE_BOOTS);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

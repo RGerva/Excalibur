@@ -19,12 +19,16 @@ public class ExcaliburTags {
         public static final TagKey<Block> IRON_METAL_DETECTOR_VALUABELS = tag("iron_metal_detector_valuables");
         public static final TagKey<Block> NEEDS_SAPPHIRE_TOOL = tag("needs_sapphire_tool");
 
+
         private static TagKey<Block> tag(String name){
             return BlockTags.create(new ResourceLocation(Excalibur_Mod.MOD_ID, name));
         }
     }
 
     public static class Items{
+
+
+
         private static TagKey<Item> tag(String name){
             return ItemTags.create(new ResourceLocation(Excalibur_Mod.MOD_ID, name));
         }

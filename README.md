@@ -10,6 +10,7 @@
 Excalibur Mod is an independent Minecraft add-on
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue)
+[![License](https://img.shields.io/github/license/RGerva/Excalibur)](http://opensource.org/licenses/MIT)
 
 ## 📝 Licence
 

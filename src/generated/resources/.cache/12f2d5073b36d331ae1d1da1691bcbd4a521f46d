@@ -1,4 +1,7 @@
-// 1.20.1	2024-02-03T14:57:53.4388112	Item Models: excalibur_mod
+// 1.20.1	2024-02-04T19:31:57.8229127	Item Models: excalibur_mod
+24f70a8d888607def30d2df086ff632104b9cba5 assets/excalibur_mod/models/item/diamond_metal_detector.json
+5ff73cb2d4061d437ad721008e42b04252b7a192 assets/excalibur_mod/models/item/iron_metal_detector.json
+ec706d12f8b295a8b0f3477e516ffe89ffdf9e0e assets/excalibur_mod/models/item/netherite_metal_detector.json
 5db501ee411b6d5025db54a6e11cd5bee970468f assets/excalibur_mod/models/item/raw_sapphire.json
 bd1046abf15112b1e93f35fe7a64ef890b64d838 assets/excalibur_mod/models/item/sapphire.json
 248c0aa12a29415b29da33db13e98daa9e238dc3 assets/excalibur_mod/models/item/sapphire_axe.json
@@ -47,6 +50,7 @@ d8e84a952a2b69b197d133ffb3be915ebe3d6e65 assets/excalibur_mod/models/item/sapphi
 878cdd0f475fbd556cdf4d5eef41b49ae9169e5c assets/excalibur_mod/models/item/sapphire_leggings_netherite_trim.json
 d4744885e0e7974ed47076723ee09346281c58fa assets/excalibur_mod/models/item/sapphire_leggings_quartz_trim.json
 f42c5d6df1fa22ba53de5fc155b9afce019b81df assets/excalibur_mod/models/item/sapphire_leggings_redstone_trim.json
+275c5275d57276f9516d1969f42e560c609a24b6 assets/excalibur_mod/models/item/sapphire_metal_detector.json
 02b44e16f6fb1ee9a8b02a8bbd633fe74a94edcd assets/excalibur_mod/models/item/sapphire_pickaxe.json
 f8987baf73bf88d716d27e3abc1da343b96126c9 assets/excalibur_mod/models/item/sapphire_shovel.json
 b4e070a6b21c3761de2f673b4c5211f9ade1b368 assets/excalibur_mod/models/item/sapphire_sword.json

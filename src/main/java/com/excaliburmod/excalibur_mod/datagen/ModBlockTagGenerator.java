@@ -21,6 +21,32 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         //CUSTOM TAGS E FORGE ORE TAGS
+        this.tag(ExcaliburTags.Blocks.METAL_DETECTOR_VALUABELS)
+                .add(ExcaliburBlocks.SAPPHIRE_ORE.get())
+                .add(ExcaliburBlocks.SAPPHIRE_ORE.get())
+                .addTags(Tags.Blocks.ORES_NETHERITE_SCRAP)
+                .addTags(Tags.Blocks.ORES_DIAMOND)
+                .addTags(Tags.Blocks.ORES_IRON);
+
+        this.tag(ExcaliburTags.Blocks.IRON_METAL_DETECTOR_VALUABELS)
+                .add(ExcaliburBlocks.SAPPHIRE_ORE.get()).addTags(Tags.Blocks.ORES_IRON);
+
+        this.tag(ExcaliburTags.Blocks.DIAMOND_METAL_DETECTOR_VALUABELS)
+                .add(ExcaliburBlocks.SAPPHIRE_ORE.get())
+                .addTags(Tags.Blocks.ORES_IRON)
+                .addTags(Tags.Blocks.ORES_DIAMOND);
+
+        this.tag(ExcaliburTags.Blocks.NETHERITE_METAL_DETECTOR_VALUABELS)
+                .add(ExcaliburBlocks.SAPPHIRE_ORE.get())
+                .addTags(Tags.Blocks.ORES_IRON)
+                .addTags(Tags.Blocks.ORES_DIAMOND)
+                .addTags(Tags.Blocks.ORES_NETHERITE_SCRAP);
+
+        this.tag(ExcaliburTags.Blocks.SAPPHIRE_METAL_DETECTOR_VALUABELS)
+                .add(ExcaliburBlocks.SAPPHIRE_ORE.get())
+                .addTags(Tags.Blocks.ORES_NETHERITE_SCRAP)
+                .addTags(Tags.Blocks.ORES_DIAMOND)
+                .addTags(Tags.Blocks.ORES_IRON);
 
 //        this.tag(ExcaliburTags.Blocks.METAL_DETECTOR_VALUABELS)
 //                .add(ExcaliburBlocks.SAPPHIRE_ORE.get()).addTag(Tags.Blocks.ORES);
