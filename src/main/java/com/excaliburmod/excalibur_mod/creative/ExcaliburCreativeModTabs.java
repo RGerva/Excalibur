@@ -34,6 +34,7 @@ public class ExcaliburCreativeModTabs {
                         pOutput.accept(ExcaliburItems.SAPPHIRE_METAL_DETECTOR.get());
 
                         pOutput.accept(ExcaliburBlocks.SAPPHIRE_BLOCK.get());
+                        pOutput.accept(ExcaliburBlocks.ZIRCON_BLOCK.get());
                         pOutput.accept(ExcaliburBlocks.RAW_SAPPHIRE_BLOCK.get());
 
                         pOutput.accept(ExcaliburBlocks.SAPPHIRE_ORE.get());
@@ -41,12 +42,27 @@ public class ExcaliburCreativeModTabs {
                         pOutput.accept(ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ExcaliburBlocks.END_SAPPHIRE_ORE.get());
 
+                        pOutput.accept(ExcaliburBlocks.ZIRCON_ORE.get());
+                        pOutput.accept(ExcaliburBlocks.DEEPSLATE_ZIRCON_ORE.get());
+                        pOutput.accept(ExcaliburBlocks.NETHER_ZIRCON_ORE.get());
+                        pOutput.accept(ExcaliburBlocks.END_ZIRCON_ORE.get());
+
+                        pOutput.accept(ExcaliburItems.STRAWBERRY.get());
+                        pOutput.accept(ExcaliburItems.STRAWBERRY_SEEDS.get());
+
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SWORD.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_PICKAXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_AXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_PICKAXE.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SHOVEL.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_HOE.get());
+
+                        pOutput.accept(ExcaliburItems.RUBY_SWORD.get());
+                        pOutput.accept(ExcaliburItems.RUBY_PICKAXE.get());
+                        pOutput.accept(ExcaliburItems.RUBY_AXE.get());
+                        pOutput.accept(ExcaliburItems.RUBY_PICKAXE.get());
+                        pOutput.accept(ExcaliburItems.RUBY_SHOVEL.get());
+                        pOutput.accept(ExcaliburItems.RUBY_HOE.get());
 
                         pOutput.accept(ExcaliburItems.SAPPHIRE_HELMET.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_CHESTPLATE.get());

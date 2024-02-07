@@ -3,6 +3,7 @@ package com.excaliburmod.excalibur_mod;
 import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
 import com.excaliburmod.excalibur_mod.creative.ExcaliburCreativeModTabs;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
+import com.excaliburmod.excalibur_mod.loot.ExcaliburLootModifiers;
 import com.mojang.authlib.GameProfile;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -43,11 +44,13 @@ public class Excalibur_Mod
         ExcaliburCreativeModTabs.register(modEventBus);//Creative
         ExcaliburItems.register(modEventBus);//Items
         ExcaliburBlocks.register(modEventBus);//Blocks
+        ExcaliburLootModifiers.register(modEventBus);//Loot
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -72,6 +75,7 @@ public class Excalibur_Mod
         public static void onClientSetup(FMLClientSetupEvent event){
             LOGGER.info("CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
         }
     }
 

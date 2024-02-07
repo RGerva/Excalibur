@@ -11,44 +11,39 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ExcaliburArmorMaterials implements ArmorMaterial {
-    SAPPHIRE_HELMET("sapphire", 1, new int[]{5, 0, 0, 0}, 25,
-    SoundEvents.ARMOR_EQUIP_CHAIN, 4f,0.3f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get())),
-    SAPPHIRE_CHESTPLATE("sapphire", 2, new int[]{0, 10, 0 , 0}, 30,
-    SoundEvents.ARMOR_EQUIP_CHAIN, 8f, 1f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get())),
-    SAPPHIRE_LEGGING("sapphire", 1, new int[]{0, 0, 8 , 0}, 25,
-    SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.2f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get())),
-    SAPPHIRE_BOOT("sapphire", 1, new int[]{0, 0, 0 , 5}, 25,
-    SoundEvents.ARMOR_EQUIP_CHAIN, 3f, 0.1f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get()));
+    SAPPHIRE("sapphire", 26, new int[]{ 5, 10, 8, 5 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get()));
+
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
     private final int enchantmentValue;
     private final SoundEvent equipSound;
     private final float toughness;
-    private final float knockbackResistence;
+    private final float knockbackResistance;
     private final Supplier<Ingredient> repairIngredient;
 
-    private static final int[] BASE_DURABILITY = {11 , 16, 15, 13};
+    private static final int[] BASE_DURABILITY = { 11, 16, 16, 13 };
 
-    ExcaliburArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound, float toughness, float knockbackResistence, Supplier<Ingredient> repairIngredient) {
+    ExcaliburArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
         this.enchantmentValue = enchantmentValue;
         this.equipSound = equipSound;
         this.toughness = toughness;
-        this.knockbackResistence = knockbackResistence;
+        this.knockbackResistance = knockbackResistance;
         this.repairIngredient = repairIngredient;
     }
 
     @Override
-    public int getDurabilityForType(ArmorItem.Type type) {
-        return BASE_DURABILITY[type.ordinal() * this.durabilityMultiplier];
+    public int getDurabilityForType(ArmorItem.Type pType) {
+        return BASE_DURABILITY[pType.ordinal()] * this.durabilityMultiplier;
     }
 
     @Override
-    public int getDefenseForType(ArmorItem.Type type) {
-        return this.protectionAmounts[type.ordinal()];
+    public int getDefenseForType(ArmorItem.Type pType) {
+        return this.protectionAmounts[pType.ordinal()];
     }
 
     @Override
@@ -78,6 +73,6 @@ public enum ExcaliburArmorMaterials implements ArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-        return this.knockbackResistence;
+        return this.knockbackResistance;
     }
 }

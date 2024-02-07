@@ -1,7 +1,6 @@
 package com.excaliburmod.excalibur_mod.datagen;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
-import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -50,11 +49,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ExcaliburItems.RAW_RUBY);
         simpleItem(ExcaliburItems.RAW_ZIRCON);
 
+        simpleItem(ExcaliburItems.STRAWBERRY);
+        simpleItem(ExcaliburItems.STRAWBERRY_SEEDS);
+
         handheldItem(ExcaliburItems.SAPPHIRE_SWORD);
         handheldItem(ExcaliburItems.SAPPHIRE_PICKAXE);
         handheldItem(ExcaliburItems.SAPPHIRE_AXE);
         handheldItem(ExcaliburItems.SAPPHIRE_SHOVEL);
         handheldItem(ExcaliburItems.SAPPHIRE_HOE);
+
+        handheldItem(ExcaliburItems.RUBY_SWORD);
+        handheldItem(ExcaliburItems.RUBY_PICKAXE);
+        handheldItem(ExcaliburItems.RUBY_AXE);
+        handheldItem(ExcaliburItems.RUBY_SHOVEL);
+        handheldItem(ExcaliburItems.RUBY_HOE);
 
         handheldItem(ExcaliburItems.SAPPHIRE_SMITHING);
 

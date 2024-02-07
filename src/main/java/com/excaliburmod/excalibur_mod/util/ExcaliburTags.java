@@ -18,6 +18,7 @@ public class ExcaliburTags {
         public static final TagKey<Block> DIAMOND_METAL_DETECTOR_VALUABELS = tag("diamond_metal_detector_valuables");
         public static final TagKey<Block> IRON_METAL_DETECTOR_VALUABELS = tag("iron_metal_detector_valuables");
         public static final TagKey<Block> NEEDS_SAPPHIRE_TOOL = tag("needs_sapphire_tool");
+        public static final TagKey<Block> NEEDS_RUBY_TOOL = tag("needs_ruby_tool");
 
 
         private static TagKey<Block> tag(String name){

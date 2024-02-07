@@ -58,7 +58,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ExcaliburBlocks.SAPPHIRE_BLOCK.get(),
                         ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
                         ExcaliburBlocks.END_SAPPHIRE_ORE.get(),
-                        ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get());
+
+                        ExcaliburBlocks.ZIRCON_BLOCK.get(),
+                        ExcaliburBlocks.ZIRCON_ORE.get(),
+                        ExcaliburBlocks.NETHER_ZIRCON_ORE.get(),
+                        ExcaliburBlocks.DEEPSLATE_ZIRCON_ORE.get(),
+                        ExcaliburBlocks.END_ZIRCON_ORE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE);
 
@@ -73,16 +78,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ExcaliburBlocks.RAW_SAPPHIRE_BLOCK.get(),
                         ExcaliburBlocks.SAPPHIRE_ORE.get(),
+                        ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
+                        ExcaliburBlocks.ZIRCON_ORE.get(),
                         ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ExcaliburBlocks.SAPPHIRE_BLOCK.get());
+                .add(ExcaliburBlocks.SAPPHIRE_BLOCK.get(),
+                        ExcaliburBlocks.ZIRCON_BLOCK.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get(),
+                        ExcaliburBlocks.END_SAPPHIRE_ORE.get(),
+                        ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get(),
                         ExcaliburBlocks.END_SAPPHIRE_ORE.get());
 
         this.tag(ExcaliburTags.Blocks.NEEDS_SAPPHIRE_TOOL);
+        this.tag(ExcaliburTags.Blocks.NEEDS_RUBY_TOOL);
 
         this.tag(BlockTags.FENCES);
 

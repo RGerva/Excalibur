@@ -5,6 +5,10 @@
     "excalibur_mod:sapphire_block",
     "excalibur_mod:deepslate_sapphire_ore",
     "excalibur_mod:end_stone_sapphire_ore",
-    "excalibur_mod:nether_sapphire_ore"
+    "excalibur_mod:zircon_block",
+    "excalibur_mod:zircon_ore",
+    "excalibur_mod:nether_zircon_ore",
+    "excalibur_mod:deepslate_zircon_ore",
+    "excalibur_mod:end_stone_zircon_ore"
   ]
 }

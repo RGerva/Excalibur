@@ -20,6 +20,11 @@ public class ExcaliburToolTiers {
                     ExcaliburTags.Blocks.NEEDS_SAPPHIRE_TOOL, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get())),
             new ResourceLocation(Excalibur_Mod.MOD_ID, "sapphire"), List.of(Tiers.NETHERITE), List.of());
 
+    public static final Tier RUBY = TierSortingRegistry.registerTier(
+            new ForgeTier(5,3000,9f,4f,25,
+                    ExcaliburTags.Blocks.NEEDS_RUBY_TOOL, () -> Ingredient.of(ExcaliburItems.RUBY.get())),
+            new ResourceLocation(Excalibur_Mod.MOD_ID, "ruby"), List.of(Tiers.NETHERITE), List.of());
+
     public static final TagKey<Block> EXCALIBUR_TIER_TAG = ExcaliburTags.Blocks.NEEDS_SAPPHIRE_TOOL;
 
     public static final Tier EXCALIBUR_TIER = TierSortingRegistry.registerTier(

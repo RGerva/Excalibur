@@ -25,6 +25,7 @@ run-data/logs
 run/logs
 run/config
 run-data/config
+src/generated
 
 # Files from Forge MDK
 forge*changelog.txt

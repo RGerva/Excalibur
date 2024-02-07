@@ -2,6 +2,7 @@ package com.excaliburmod.excalibur_mod.datagen;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
+import com.excaliburmod.excalibur_mod.loot.AddItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -18,6 +19,9 @@ public class ModGlobalModifiersProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
+        add("strawberry_seeds_form_grass", new AddItemModifier(new LootItemCondition[]{
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.1f).build()}, ExcaliburItems.STRAWBERRY_SEEDS.get()));
 
     }
 }

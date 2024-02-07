@@ -11,19 +11,34 @@
   "item.excalibur_mod.diamond_metal_detector": "Diamond Metal Detector",
   "item.excalibur_mod.netherite_metal_detector": "Netherite Metal Detector",
   "item.excalibur_mod.sapphire_metal_detector": "Sapphire Metal Detector",
+  "tooltip.excalibur.sapphire_metal_detector_valuables.tooltip": "Finds Sapphire Ore Radios = 5 PosY = 128",
+  "tooltip.excalibur.netherite_metal_detector_valuables.tooltip": "Finds Sapphire Ore and Netherite Scrap Ore Radios = 4 PosY = 64",
+  "tooltip.excalibur.diamond_metal_detector_valuables.tooltip": "Finds Sapphire Ore and Diamond Ore Radios = 3 PosY = 64",
+  "tooltip.excalibur.iron_metal_detector_valuables.tooltip": "Finds Sapphire Ore and Iron Ore Radios = 2 PosY = 64",
+
 
   "block.excalibur_mod.sapphire_block": "Block of Sapphire",
+  "block.excalibur_mod.zircon_block": "Block of Zircon",
   "block.excalibur_mod.raw_sapphire_block": "Block of Raw Sapphire",
 
   "block.excalibur_mod.sapphire_ore": "Sapphire Ore",
+  "block.excalibur_mod.zircon_ore": "Sapphire Ore",
   "block.excalibur_mod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.excalibur_mod.deepslate_zircon_ore": "Deepslate Zircon Ore",
   "block.excalibur_mod.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+  "block.excalibur_mod.end_stone_zircon_ore": "Endstone Zircon Ore",
   "block.excalibur_mod.nether_sapphire_ore": "Nether Sapphire Ore",
+  "block.excalibur_mod.nether_zircon_ore": "Nether Zircon Ore",
 
   "item.excalibur_mod.sapphire_sword": "Sapphire Sword",
   "item.excalibur_mod.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.excalibur_mod.sapphire_axe": "Sapphire Axe",
   "item.excalibur_mod.sapphire_hoe": "Sapphire Hoe",
+
+  "item.excalibur_mod.ruby_sword": "Ruby Sword",
+  "item.excalibur_mod.ruby_pickaxe": "Ruby Pickaxe",
+  "item.excalibur_mod.ruby_axe": "Ruby Axe",
+  "item.excalibur_mod.ruby_hoe": "Ruby Hoe",
 
   "upgrade.excalibur_mod.sapphire_upgrade": "Sapphire Upgrade",
   "item.excalibur_mod.smithing_template.sapphire_upgrade.applies_to": "Netherite Equipment",
