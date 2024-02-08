@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public enum ExcaliburArmorMaterials implements ArmorMaterial {
     SAPPHIRE("sapphire", 26, new int[]{ 5, 10, 8, 5 }, 25,
-            SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get()));
+            SoundEvents.ARMOR_EQUIP_CHAIN, 0f, 0f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get()));
 
     private final String name;
     private final int durabilityMultiplier;

@@ -2,6 +2,7 @@ package com.excaliburmod.excalibur_mod.item;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
 import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
+import com.excaliburmod.excalibur_mod.item.armor.ExcaliburArmorItem;
 import com.excaliburmod.excalibur_mod.item.armor.ExcaliburArmorMaterials;
 import com.excaliburmod.excalibur_mod.item.detector.MetalDetectorItem;
 import com.excaliburmod.excalibur_mod.item.foods.ExcaliburFoods;
@@ -86,7 +87,7 @@ public class ExcaliburItems {
     public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
             () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET,new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
-            () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+            () -> new ExcaliburArmorItem(ExcaliburArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE,new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
             () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE, ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",

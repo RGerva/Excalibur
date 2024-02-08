@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "excalibur_mod:item/sapphire_upgrade_smithing_template"
-  }
-}
