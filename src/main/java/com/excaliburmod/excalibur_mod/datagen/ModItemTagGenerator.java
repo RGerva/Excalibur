@@ -23,7 +23,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ExcaliburItems.SAPPHIRE_HELMET.get())
                 .add(ExcaliburItems.SAPPHIRE_CHESTPLATE.get())
                 .add(ExcaliburItems.SAPPHIRE_LEGGINGS.get())
-                .add(ExcaliburItems.SAPPHIRE_BOOTS.get());
+                .add(ExcaliburItems.SAPPHIRE_BOOTS.get())
+                .add(ExcaliburItems.RUBY_HELMET.get())
+                .add(ExcaliburItems.RUBY_CHESTPLATE.get())
+                .add(ExcaliburItems.RUBY_LEGGINGS.get())
+                .add(ExcaliburItems.RUBY_BOOTS.get());
 
         this.tag(ItemTags.MUSIC_DISCS);
 

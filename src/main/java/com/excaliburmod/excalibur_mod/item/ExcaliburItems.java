@@ -93,6 +93,16 @@ public class ExcaliburItems {
     public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
             () -> new ArmorItem(ExcaliburArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS,new Item.Properties()));
 
+    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
+            () -> new ArmorItem(ExcaliburArmorMaterials.RUBY, ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
+            () -> new ExcaliburArmorItem(ExcaliburArmorMaterials.RUBY, ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
+            () -> new ArmorItem(ExcaliburArmorMaterials.RUBY, ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
+            () -> new ArmorItem(ExcaliburArmorMaterials.RUBY, ArmorItem.Type.BOOTS,new Item.Properties()));
+
+
     //FOODS
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             () -> new Item(new Item.Properties().food(ExcaliburFoods.STRAWBERRY)));

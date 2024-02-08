@@ -20,11 +20,15 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcaliburArmorItem extends ArmorItem {
-    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
+    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP_SAPPHIRE =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ExcaliburArmorMaterials.SAPPHIRE, new MobEffectInstance(MobEffects.NIGHT_VISION, 100, 0,
                             false,false, true)).build();
 
+    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP_RUBY =
+            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
+                    .put(ExcaliburArmorMaterials.RUBY, new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 100, 3,
+                            false,false, true)).build();
     public ExcaliburArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
@@ -40,11 +44,23 @@ public class ExcaliburArmorItem extends ArmorItem {
             narmor.add(new ItemStack(ExcaliburItems.SAPPHIRE_CHESTPLATE.get()));
             narmor.add(new ItemStack(ExcaliburItems.SAPPHIRE_HELMET.get()));
 
+            narmor.add(new ItemStack(ExcaliburItems.RUBY_BOOTS.get()));
+            narmor.add(new ItemStack(ExcaliburItems.RUBY_LEGGINGS.get()));
+            narmor.add(new ItemStack(ExcaliburItems.RUBY_CHESTPLATE.get()));
+            narmor.add(new ItemStack(ExcaliburItems.RUBY_HELMET.get()));
+
             List<ItemStack> armor = (List<ItemStack>) pEntity.getArmorSlots();
             if((armor.get(0).getItem() == narmor.get(0).getItem())&&(armor.get(1).getItem() == narmor.get(1).getItem())&&
                     (armor.get(2).getItem() == narmor.get(2).getItem())&&(armor.get(3).getItem() == narmor.get(3).getItem())) {
 
-                for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+                for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP_SAPPHIRE.entrySet()) {
+                    MobEffectInstance mapStatusEffect = entry.getValue();
+                    ((LivingEntity) pEntity).addEffect(new MobEffectInstance(mapStatusEffect));
+                }
+            }else if((armor.get(0).getItem() == narmor.get(4).getItem())&&(armor.get(1).getItem() == narmor.get(5).getItem())&&
+                    (armor.get(2).getItem() == narmor.get(6).getItem())&&(armor.get(3).getItem() == narmor.get(7).getItem())) {
+
+                for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP_RUBY.entrySet()) {
                     MobEffectInstance mapStatusEffect = entry.getValue();
                     ((LivingEntity) pEntity).addEffect(new MobEffectInstance(mapStatusEffect));
                 }

@@ -69,6 +69,11 @@ public class ExcaliburCreativeModTabs {
                         pOutput.accept(ExcaliburItems.SAPPHIRE_LEGGINGS.get());
                         pOutput.accept(ExcaliburItems.SAPPHIRE_BOOTS.get());
 
+                        pOutput.accept(ExcaliburItems.RUBY_HELMET.get());
+                        pOutput.accept(ExcaliburItems.RUBY_CHESTPLATE.get());
+                        pOutput.accept(ExcaliburItems.RUBY_LEGGINGS.get());
+                        pOutput.accept(ExcaliburItems.RUBY_BOOTS.get());
+
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SMITHING.get());
 
                         pOutput.accept(ExcaliburItems.EXCALIBUR_SWORD.get());
