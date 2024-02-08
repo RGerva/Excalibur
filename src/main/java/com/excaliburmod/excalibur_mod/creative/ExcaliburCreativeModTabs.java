@@ -23,10 +23,12 @@ public class ExcaliburCreativeModTabs {
                         pOutput.accept(ExcaliburItems.SAPPHIRE.get());
                         pOutput.accept(ExcaliburItems.RUBY.get());
                         pOutput.accept(ExcaliburItems.ZIRCON.get());
+                        pOutput.accept(ExcaliburItems.OPAL.get());
 
                         pOutput.accept(ExcaliburItems.RAW_SAPPHIRE.get());
                         pOutput.accept(ExcaliburItems.RAW_RUBY.get());
                         pOutput.accept(ExcaliburItems.RAW_ZIRCON.get());
+                        pOutput.accept(ExcaliburItems.RAW_OPAL.get());
 
                         pOutput.accept(ExcaliburItems.IRON_METAL_DETECTOR.get());
                         pOutput.accept(ExcaliburItems.DIAMOND_METAL_DETECTOR.get());
@@ -77,6 +79,8 @@ public class ExcaliburCreativeModTabs {
                         pOutput.accept(ExcaliburItems.SAPPHIRE_SMITHING.get());
 
                         pOutput.accept(ExcaliburItems.EXCALIBUR_SWORD.get());
+
+                        pOutput.accept(ExcaliburBlocks.GEM_INFUSING_STATION.get());
 
                     })
                     .build());

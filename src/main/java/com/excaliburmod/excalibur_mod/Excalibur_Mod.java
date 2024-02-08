@@ -1,12 +1,17 @@
 package com.excaliburmod.excalibur_mod;
 
 import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
+import com.excaliburmod.excalibur_mod.block.entity.ExcaliburBlockEntities;
 import com.excaliburmod.excalibur_mod.creative.ExcaliburCreativeModTabs;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import com.excaliburmod.excalibur_mod.loot.ExcaliburLootModifiers;
+import com.excaliburmod.excalibur_mod.recepie.ExcaliburRecipes;
+import com.excaliburmod.excalibur_mod.screen.ExcaliburMenuTypes;
+import com.excaliburmod.excalibur_mod.screen.GemInfusingStationScreen;
 import com.mojang.authlib.GameProfile;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -46,6 +51,10 @@ public class Excalibur_Mod
         ExcaliburBlocks.register(modEventBus);//Blocks
         ExcaliburLootModifiers.register(modEventBus);//Loot
 
+        ExcaliburBlockEntities.register(modEventBus);//Custom Entities
+        ExcaliburMenuTypes.register(modEventBus);//Menu Types
+        ExcaliburRecipes.register(modEventBus);//Custom Recepies
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -76,6 +85,7 @@ public class Excalibur_Mod
             LOGGER.info("CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
+            MenuScreens.register(ExcaliburMenuTypes.GEM_INFUSING_STATION_MENU.get(), GemInfusingStationScreen::new);
         }
     }
 

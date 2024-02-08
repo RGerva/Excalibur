@@ -36,6 +36,8 @@ public class ExcaliburItems {
     public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> OPAL = ITEMS.register("opal",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
@@ -44,6 +46,9 @@ public class ExcaliburItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_OPAL = ITEMS.register("raw_opal",
             () -> new Item(new Item.Properties()));
 
     //DETECTOR

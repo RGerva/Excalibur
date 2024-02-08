@@ -44,10 +44,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ExcaliburItems.SAPPHIRE);
         simpleItem(ExcaliburItems.RUBY);
         simpleItem(ExcaliburItems.ZIRCON);
+        simpleItem(ExcaliburItems.OPAL);
 
         simpleItem(ExcaliburItems.RAW_SAPPHIRE);
         simpleItem(ExcaliburItems.RAW_RUBY);
         simpleItem(ExcaliburItems.RAW_ZIRCON);
+        simpleItem(ExcaliburItems.RAW_OPAL);
 
         simpleItem(ExcaliburItems.STRAWBERRY);
         simpleItem(ExcaliburItems.STRAWBERRY_SEEDS);

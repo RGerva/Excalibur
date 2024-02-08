@@ -30,6 +30,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ExcaliburBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ExcaliburBlocks.ZIRCON_BLOCK.get());
         this.dropSelf(ExcaliburBlocks.RAW_SAPPHIRE_BLOCK.get());
+        this.dropSelf(ExcaliburBlocks.GEM_INFUSING_STATION.get());
 
         this.add(ExcaliburBlocks.SAPPHIRE_ORE.get(),
                 block -> createCustomSapphireOreDrops(ExcaliburBlocks.SAPPHIRE_ORE.get(), ExcaliburItems.RAW_SAPPHIRE.get(), 2.0F,5.0F));

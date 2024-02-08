@@ -1,6 +1,7 @@
 package com.excaliburmod.excalibur_mod.block;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
+import com.excaliburmod.excalibur_mod.block.custom.GemInfusingStationBlock;
 import com.excaliburmod.excalibur_mod.block.custom.crops.StrawberryCropBlock;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -83,4 +84,8 @@ public class ExcaliburBlocks {
     //CROPS
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
+
+    public static final RegistryObject<Block> GEM_INFUSING_STATION = registerBlock("gem_infusing_station",
+            () -> new GemInfusingStationBlock(BlockBehaviour.Properties.of()
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 }

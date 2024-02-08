@@ -1,0 +1,11 @@
+{
+  "type": "excalibur_mod:gem_infusing",
+  "ingredients": [
+    {
+      "item": "excalibur_mod:raw_zircon"
+    }
+  ],
+  "output": {
+    "item": "excalibur_mod:zircon"
+  }
+}

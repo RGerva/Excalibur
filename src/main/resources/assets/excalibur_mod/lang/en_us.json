@@ -2,10 +2,12 @@
   "item.excalibur_mod.sapphire": "Sapphire",
   "item.excalibur_mod.ruby": "Ruby",
   "item.excalibur_mod.zircon": "Zircon",
+  "item.excalibur_mod.opal": "Opal",
 
   "item.excalibur_mod.raw_sapphire": "Raw Sapphire",
   "item.excalibur_mod.raw_ruby": "Raw Ruby",
   "item.excalibur_mod.raw_zircon": "Raw Zircon",
+  "item.excalibur_mod.raw_opal": "Raw Opal",
 
   "item.excalibur_mod.iron_metal_detector": "Iron Metal Detector",
   "item.excalibur_mod.diamond_metal_detector": "Diamond Metal Detector",
@@ -53,6 +55,8 @@
   "item.excalibur_mod.ruby_chestplate": "Ruby Chestplate",
   "item.excalibur_mod.ruby_leggings": "Ruby Legging",
   "item.excalibur_mod.ruby_boots": "Ruby Boots",
+
+  "block.excalibur_mod.gem_infusing_station": "Gem Infusing Station",
 
   "item.excalibur_mod.excalibur_sword": "The Excalibur",
 
