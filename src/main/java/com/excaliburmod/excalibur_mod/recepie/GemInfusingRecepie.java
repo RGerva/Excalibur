@@ -15,38 +15,40 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class GemInfusingRecepie implements Recipe<SimpleContainer> {
-    private final NonNullList<Ingredient> inputItems;
-    private final ItemStack output;
     private final ResourceLocation id;
+    private final ItemStack output;
+    private final NonNullList<Ingredient> recipeItems;
 
-    public GemInfusingRecepie(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id) {
-        this.inputItems = inputItems;
-        this.output = output;
+    public GemInfusingRecepie(ResourceLocation id, ItemStack output,
+                                    NonNullList<Ingredient> recipeItems) {
         this.id = id;
+        this.output = output;
+        this.recipeItems = recipeItems;
     }
 
     @Override
-    public boolean matches(SimpleContainer simpleContainer, Level level) {
-        if(level.isClientSide()){
+    public boolean matches(SimpleContainer pContainer, Level pLevel) {
+        if(pLevel.isClientSide()) {
             return false;
         }
 
-        return inputItems.get(0).test(simpleContainer.getItem(0));
-    }
-
-    @Override
-    public NonNullList<Ingredient> getIngredients() {
-        return inputItems;
+        return recipeItems.get(0).test(pContainer.getItem(1));
     }
 
     @Override
     public ItemStack assemble(SimpleContainer simpleContainer, RegistryAccess registryAccess) {
-        return output.copy();
+        return output;
     }
 
     @Override
-    public boolean canCraftInDimensions(int i, int i1) {
-        return false;
+    public NonNullList<Ingredient> getIngredients() {
+        return recipeItems;
+    }
+
+
+    @Override
+    public boolean canCraftInDimensions(int pWidth, int pHeight) {
+        return true;
     }
 
     @Override
@@ -69,53 +71,52 @@ public class GemInfusingRecepie implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<GemInfusingRecepie>{
+    public static class Type implements RecipeType<GemInfusingRecepie> {
+        private Type() { }
         public static final Type INSTANCE = new Type();
         public static final String ID = "gem_infusing";
     }
 
 
-    public static class Serializer implements RecipeSerializer<GemInfusingRecepie>{
-
+    public static class Serializer implements RecipeSerializer<GemInfusingRecepie> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(Excalibur_Mod.MOD_ID, "gem_polishing");
+        public static final ResourceLocation ID =
+                new ResourceLocation(Excalibur_Mod.MOD_ID, "gem_infusing");
 
         @Override
-        public GemInfusingRecepie fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
-            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "output"));
+        public GemInfusingRecepie fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
+            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
 
-            JsonArray ingredients = GsonHelper.getAsJsonArray(jsonObject, "ingredients");
-
+            JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
             NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
 
-            for(int i = 0; i < inputs.size(); i++) {
+            for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new GemInfusingRecepie(inputs, output, resourceLocation);
+            return new GemInfusingRecepie(pRecipeId, output, inputs);
         }
 
         @Override
-        public @Nullable GemInfusingRecepie fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
-            NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
+        public @Nullable GemInfusingRecepie fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
+            NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
 
-            for(int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromNetwork(pBuffer));
+            for (int i = 0; i < inputs.size(); i++) {
+                inputs.set(i, Ingredient.fromNetwork(buf));
             }
 
-            ItemStack output = pBuffer.readItem();
-            return new GemInfusingRecepie(inputs, output, pRecipeId);
+            ItemStack output = buf.readItem();
+            return new GemInfusingRecepie(id, output, inputs);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, GemInfusingRecepie pRecipe) {
-            pBuffer.writeInt(pRecipe.inputItems.size());
+        public void toNetwork(FriendlyByteBuf buf, GemInfusingRecepie recipe) {
+            buf.writeInt(recipe.getIngredients().size());
 
-            for (Ingredient ingredient : pRecipe.getIngredients()) {
-                ingredient.toNetwork(pBuffer);
+            for (Ingredient ing : recipe.getIngredients()) {
+                ing.toNetwork(buf);
             }
-
-            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
+            buf.writeItemStack(recipe.getResultItem(null), false);
         }
     }
 }

@@ -93,11 +93,22 @@ public class GemInfusingStationBlock extends BaseEntityBlock {
         return new GemInfusingStationBlockEntity(pos, state);
     }
 
+//    @Nullable
+//    @Override
+//    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
+//                                                                  BlockEntityType<T> type) {
+//        return createTickerHelper(type, ExcaliburBlockEntities.GEM_INFUSING_STATION.get(),
+//                GemInfusingStationBlockEntity::tick);
+//    }
+
     @Nullable
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
-                                                                  BlockEntityType<T> type) {
-        return createTickerHelper(type, ExcaliburBlockEntities.GEM_INFUSING_STATION.get(),
-                GemInfusingStationBlockEntity::tick);
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
+        if(pLevel.isClientSide()) {
+            return null;
+        }
+
+        return createTickerHelper(pBlockEntityType, ExcaliburBlockEntities.GEM_INFUSING_STATION.get(),
+                (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
 }

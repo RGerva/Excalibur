@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -23,6 +24,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import org.checkerframework.common.returnsreceiver.qual.This;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -125,21 +127,21 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, GemInfusingStationBlockEntity pEntity) {
+    public void tick(Level level, BlockPos pos, BlockState state) {
         if(level.isClientSide()) {
             return;
         }
 
-        if(hasRecipe(pEntity)) {
-            pEntity.progress++;
+        if(hasRecipe(this)) {
+            progress++;
             setChanged(level, pos, state);
 
-            if(pEntity.progress >= pEntity.maxProgress) {
-                craftItem(pEntity);
+            if(progress >= maxProgress) {
+                craftItem();
+                resetProgress();
             }
         } else {
-            pEntity.resetProgress();
-            setChanged(level, pos, state);
+            resetProgress();
         }
     }
 
@@ -147,23 +149,24 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
         this.progress = 0;
     }
 
-    private static void craftItem(GemInfusingStationBlockEntity pEntity) {
-
-        Level level = pEntity.level;
-        SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
-        for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+    private void craftItem() {
+        Level level = this.level;
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for (int i = 0; i < this.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
 
         Optional<GemInfusingRecepie> recipe = level.getRecipeManager()
                 .getRecipeFor(GemInfusingRecepie.Type.INSTANCE, inventory, level);
 
-        if(hasRecipe(pEntity)) {
-            pEntity.itemHandler.extractItem(1, 1, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(ExcaliburItems.ZIRCON.get(),
-                    pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
 
-            pEntity.resetProgress();
+        if(hasRecipe(this)) {
+            ItemStack result = recipe.get().getResultItem(null);
+            this.itemHandler.extractItem(1, 1, false);
+
+            this.itemHandler.setStackInSlot(2, new ItemStack(result.getItem(),
+                    this.itemHandler.getStackInSlot(2).getCount() + 1));
+            this.resetProgress();
         }
     }
 
@@ -179,6 +182,15 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
                 canInsertItemIntoOutputSlot(inventory, new ItemStack(ExcaliburItems.ZIRCON.get(), 1));
     }
 
+    private Optional<GemInfusingRecepie> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for(int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(GemInfusingRecepie.Type.INSTANCE, inventory, level);
+    }
+
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
         return inventory.getItem(2).getItem() == stack.getItem() || inventory.getItem(2).isEmpty();
     }
@@ -187,6 +199,4 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
         return inventory.getItem(2).getMaxStackSize() > inventory.getItem(2).getCount();
     }
 
-    public void tick(Level pLevel1, BlockPos pPos, BlockState pState1) {
-    }
 }

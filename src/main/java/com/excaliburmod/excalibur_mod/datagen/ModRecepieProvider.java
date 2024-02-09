@@ -19,6 +19,10 @@ public class ModRecepieProvider extends RecipeProvider implements IConditionBuil
     public static final List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ExcaliburItems.RAW_SAPPHIRE.get(),
             ExcaliburBlocks.SAPPHIRE_ORE.get(),ExcaliburBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
             ExcaliburBlocks.NETHER_SAPPHIRE_ORE.get(),ExcaliburBlocks.END_SAPPHIRE_ORE.get());
+
+    public static final List<ItemLike> ZIRCON_SMELTABLES = List.of(ExcaliburItems.RAW_ZIRCON.get(),
+            ExcaliburBlocks.ZIRCON_ORE.get(),ExcaliburBlocks.DEEPSLATE_ZIRCON_ORE.get(),
+            ExcaliburBlocks.NETHER_ZIRCON_ORE.get(),ExcaliburBlocks.END_ZIRCON_ORE.get());
      public ModRecepieProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -27,6 +31,9 @@ public class ModRecepieProvider extends RecipeProvider implements IConditionBuil
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         oreSmelting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ExcaliburItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
         oreBlasting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ExcaliburItems.SAPPHIRE.get(), 0.7f, 100, "sapphire");
+        oreSmelting(pWriter, ZIRCON_SMELTABLES, RecipeCategory.MISC, ExcaliburItems.ZIRCON.get(), 0.25f, 200, "zircon");
+        oreBlasting(pWriter, ZIRCON_SMELTABLES, RecipeCategory.MISC, ExcaliburItems.ZIRCON.get(), 0.7f, 100, "zircon");
+
 
         //SAPPHIRE BLOCK TO SAPPHIRE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ExcaliburBlocks.SAPPHIRE_BLOCK.get())

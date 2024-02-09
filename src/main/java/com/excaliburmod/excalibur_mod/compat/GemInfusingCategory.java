@@ -19,7 +19,7 @@ public class GemInfusingCategory implements IRecipeCategory<GemInfusingRecepie> 
     public static final ResourceLocation UID = new ResourceLocation(Excalibur_Mod.MOD_ID, "gem_infusing");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Excalibur_Mod.MOD_ID,
             "textures/gui/gem_infusing_station_gui.png");
-    public static final RecipeType<GemInfusingRecepie> GEM_POLISHING_TYPE =
+    public static final RecipeType<GemInfusingRecepie> GEM_INFUSING_TYPE =
             new RecipeType<>(UID, GemInfusingRecepie.class);
 
     private final IDrawable background;
@@ -32,12 +32,12 @@ public class GemInfusingCategory implements IRecipeCategory<GemInfusingRecepie> 
 
     @Override
     public RecipeType<GemInfusingRecepie> getRecipeType() {
-        return GEM_POLISHING_TYPE;
+        return GEM_INFUSING_TYPE;
     }
 
     @Override
     public Component getTitle() {
-        return Component.translatable("block.excalibur_mod.gem_polishing_station");
+        return Component.translatable("block.excalibur_mod.gem_infusing_station");
     }
 
     @Override
@@ -52,8 +52,9 @@ public class GemInfusingCategory implements IRecipeCategory<GemInfusingRecepie> 
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, GemInfusingRecepie recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 80, 11).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 86, 15).addIngredients(recipe.getIngredients().get(0));
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 59).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 86, 60).addItemStack(recipe.getResultItem(null));
+
     }
 }
