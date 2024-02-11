@@ -1,5 +1,7 @@
 package com.excaliburmod.excalibur_mod.block.entity;
 
+import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
+import com.excaliburmod.excalibur_mod.block.custom.GemInfusingStationBlock;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import com.excaliburmod.excalibur_mod.recepie.GemInfusingRecepie;
 import com.excaliburmod.excalibur_mod.screen.GemInfusingStationMenu;
@@ -28,6 +30,7 @@ import org.checkerframework.common.returnsreceiver.qual.This;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.Map;
 import java.util.Optional;
 
 public class GemInfusingStationBlockEntity extends BlockEntity implements MenuProvider {
@@ -36,9 +39,28 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
         protected void onContentsChanged(int slot) {
             setChanged();
         }
+
+        @Override
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            return switch (slot) {
+                case 0 -> stack.getItem() == ExcaliburItems.OPAL.get();
+                case 1 -> stack.getItem() == ExcaliburItems.RAW_ZIRCON.get() || stack.getItem() == ExcaliburItems.RAW_RUBY.get();
+                case 2 -> false;
+                default -> super.isItemValid(slot, stack);
+            };
+        }
     };
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+            Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
+                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
+                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))));
 
     protected final ContainerData data;
     private int progress = 0;
@@ -71,6 +93,7 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
         };
     }
 
+
     @Override
     public Component getDisplayName() {
         return Component.literal("Gem Infusing Station");
@@ -84,11 +107,27 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if(cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
-        }
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
+            if (side == null) {
+                return lazyItemHandler.cast();
+            }
 
-        return super.getCapability(cap, side);
+            if (directionWrappedHandlerMap.containsKey(side)) {
+                Direction localDir = this.getBlockState().getValue(GemInfusingStationBlock.FACING);
+
+                if (side == Direction.UP || side == Direction.DOWN) {
+                    return directionWrappedHandlerMap.get(side).cast();
+                }
+
+                return switch (localDir) {
+                    default -> directionWrappedHandlerMap.get(side.getOpposite()).cast();
+                    case EAST -> directionWrappedHandlerMap.get(side.getClockWise()).cast();
+                    case SOUTH -> directionWrappedHandlerMap.get(side).cast();
+                    case WEST -> directionWrappedHandlerMap.get(side.getCounterClockWise()).cast();
+                };
+            }
+        }
+            return super.getCapability(cap, side);
     }
 
     @Override
@@ -171,24 +210,18 @@ public class GemInfusingStationBlockEntity extends BlockEntity implements MenuPr
     }
 
     private static boolean hasRecipe(GemInfusingStationBlockEntity entity) {
+        Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasRawGemInFirstSlot = entity.itemHandler.getStackInSlot(1).getItem() == ExcaliburItems.RAW_ZIRCON.get();
+        Optional<GemInfusingRecepie> recipe = level.getRecipeManager()
+                .getRecipeFor(GemInfusingRecepie.Type.INSTANCE, inventory, level);
 
-        return hasRawGemInFirstSlot && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, new ItemStack(ExcaliburItems.ZIRCON.get(), 1));
-    }
 
-    private Optional<GemInfusingRecepie> getCurrentRecipe() {
-        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
-        for(int i = 0; i < itemHandler.getSlots(); i++) {
-            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
-        }
-
-        return this.level.getRecipeManager().getRecipeFor(GemInfusingRecepie.Type.INSTANCE, inventory, level);
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
+                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem(null));
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
