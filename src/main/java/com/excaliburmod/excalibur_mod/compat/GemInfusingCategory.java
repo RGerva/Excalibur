@@ -2,6 +2,7 @@ package com.excaliburmod.excalibur_mod.compat;
 
 import com.excaliburmod.excalibur_mod.Excalibur_Mod;
 import com.excaliburmod.excalibur_mod.block.ExcaliburBlocks;
+import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import com.excaliburmod.excalibur_mod.recepie.GemInfusingRecepie;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -53,6 +54,7 @@ public class GemInfusingCategory implements IRecipeCategory<GemInfusingRecepie> 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, GemInfusingRecepie recipe, IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 86, 15).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.CATALYST, 12, 15).addItemStack(ExcaliburItems.OPAL.get().getDefaultInstance());
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 86, 60).addItemStack(recipe.getResultItem(null));
 

@@ -5,6 +5,7 @@ import com.excaliburmod.excalibur_mod.block.entity.ExcaliburBlockEntities;
 import com.excaliburmod.excalibur_mod.creative.ExcaliburCreativeModTabs;
 import com.excaliburmod.excalibur_mod.item.ExcaliburItems;
 import com.excaliburmod.excalibur_mod.loot.ExcaliburLootModifiers;
+import com.excaliburmod.excalibur_mod.networking.ModMessages;
 import com.excaliburmod.excalibur_mod.recepie.ExcaliburRecipes;
 import com.excaliburmod.excalibur_mod.screen.ExcaliburMenuTypes;
 import com.excaliburmod.excalibur_mod.screen.GemInfusingStationScreen;
@@ -63,7 +64,7 @@ public class Excalibur_Mod
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(ModMessages::register);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
