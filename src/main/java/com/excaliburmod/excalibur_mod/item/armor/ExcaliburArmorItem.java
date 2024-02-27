@@ -29,6 +29,12 @@ public class ExcaliburArmorItem extends ArmorItem {
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ExcaliburArmorMaterials.RUBY, new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 100, 3,
                             false,false, true)).build();
+
+    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP_MYTHRIL =
+            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
+                    .put(ExcaliburArmorMaterials.MYTHRIL, new MobEffectInstance(MobEffects.LUCK, 100, 4,
+                            false,false, true)).build();
+
     public ExcaliburArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
@@ -49,6 +55,12 @@ public class ExcaliburArmorItem extends ArmorItem {
             narmor.add(new ItemStack(ExcaliburItems.RUBY_CHESTPLATE.get()));
             narmor.add(new ItemStack(ExcaliburItems.RUBY_HELMET.get()));
 
+            narmor.add(new ItemStack(ExcaliburItems.MYTHRIL_BOOTS.get()));
+            narmor.add(new ItemStack(ExcaliburItems.MYTHRIL_LEGGINGS.get()));
+            narmor.add(new ItemStack(ExcaliburItems.MYTHRIL_CHESTPLATE.get()));
+            narmor.add(new ItemStack(ExcaliburItems.MYTHRIL_HELMET.get()));
+
+
             List<ItemStack> armor = (List<ItemStack>) pEntity.getArmorSlots();
             if((armor.get(0).getItem() == narmor.get(0).getItem())&&(armor.get(1).getItem() == narmor.get(1).getItem())&&
                     (armor.get(2).getItem() == narmor.get(2).getItem())&&(armor.get(3).getItem() == narmor.get(3).getItem())) {
@@ -61,6 +73,13 @@ public class ExcaliburArmorItem extends ArmorItem {
                     (armor.get(2).getItem() == narmor.get(6).getItem())&&(armor.get(3).getItem() == narmor.get(7).getItem())) {
 
                 for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP_RUBY.entrySet()) {
+                    MobEffectInstance mapStatusEffect = entry.getValue();
+                    ((LivingEntity) pEntity).addEffect(new MobEffectInstance(mapStatusEffect));
+                }
+            }else if((armor.get(0).getItem() == narmor.get(8).getItem())&&(armor.get(1).getItem() == narmor.get(9).getItem())&&
+                    (armor.get(2).getItem() == narmor.get(10).getItem())&&(armor.get(3).getItem() == narmor.get(11).getItem())) {
+
+                for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP_MYTHRIL.entrySet()) {
                     MobEffectInstance mapStatusEffect = entry.getValue();
                     ((LivingEntity) pEntity).addEffect(new MobEffectInstance(mapStatusEffect));
                 }

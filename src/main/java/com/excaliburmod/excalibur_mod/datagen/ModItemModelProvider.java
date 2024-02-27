@@ -85,6 +85,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ExcaliburItems.RUBY_LEGGINGS);
         trimmedArmorItem(ExcaliburItems.RUBY_BOOTS);
 
+        trimmedArmorItem(ExcaliburItems.MYTHRIL_HELMET);
+        trimmedArmorItem(ExcaliburItems.MYTHRIL_CHESTPLATE);
+        trimmedArmorItem(ExcaliburItems.MYTHRIL_LEGGINGS);
+        trimmedArmorItem(ExcaliburItems.MYTHRIL_BOOTS);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

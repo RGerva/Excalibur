@@ -15,7 +15,10 @@ public enum ExcaliburArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_CHAIN, 3f, 1.5f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get())),
 
     RUBY("ruby", 26, new int[]{ 5, 10, 8, 5 }, 25,
-    SoundEvents.ARMOR_EQUIP_CHAIN, 3.5f, 1.5f, () -> Ingredient.of(ExcaliburItems.SAPPHIRE.get()));
+    SoundEvents.ARMOR_EQUIP_CHAIN, 3.5f, 1.5f, () -> Ingredient.of(ExcaliburItems.RUBY.get())),
+
+    MYTHRIL("mythril", 30, new int[]{ 5, 10, 8, 5 }, 30,
+    SoundEvents.ARMOR_EQUIP_CHAIN, 3.5f, 2f, () -> Ingredient.of(ExcaliburItems.MYTHRIL.get()));
 
     private final String name;
     private final int durabilityMultiplier;

@@ -105,6 +105,15 @@ public class ExcaliburItems {
             () -> new ArmorItem(ExcaliburArmorMaterials.RUBY, ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
             () -> new ArmorItem(ExcaliburArmorMaterials.RUBY, ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> MYTHRIL_HELMET = ITEMS.register("mythril_helmet",
+            () -> new ArmorItem(ExcaliburArmorMaterials.MYTHRIL, ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> MYTHRIL_CHESTPLATE = ITEMS.register("mythril_chestplate",
+            () -> new ExcaliburArmorItem(ExcaliburArmorMaterials.MYTHRIL, ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> MYTHRIL_LEGGINGS = ITEMS.register("mythril_leggings",
+            () -> new ArmorItem(ExcaliburArmorMaterials.MYTHRIL, ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> MYTHRIL_BOOTS = ITEMS.register("mythril_boots",
+            () -> new ArmorItem(ExcaliburArmorMaterials.MYTHRIL, ArmorItem.Type.BOOTS,new Item.Properties()));
+
 
 
     //FOODS
