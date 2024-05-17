@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "excalibur",
+  "ingredient": {
+    "item": "excalibur:deepslate_avalonian_ore"
+  },
+  "result": "excalibur:avalonian_nugget"
+}

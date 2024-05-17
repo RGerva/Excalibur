@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "excalibur:block/avalonian_block"
+    }
+  }
+}

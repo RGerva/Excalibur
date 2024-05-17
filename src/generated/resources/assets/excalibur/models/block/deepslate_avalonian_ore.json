@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "excalibur:block/deepslate_avalonian_ore"
+  }
+}

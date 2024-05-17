@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "excalibur",
+  "key": {
+    "#": {
+      "item": "excalibur:avalonian_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "excalibur:avalonian_ingot"
+  },
+  "show_notification": true
+}

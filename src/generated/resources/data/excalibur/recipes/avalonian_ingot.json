@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "excalibur",
+  "ingredients": [
+    {
+      "item": "excalibur:avalonian_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "excalibur:avalonian_nugget"
+  }
+}

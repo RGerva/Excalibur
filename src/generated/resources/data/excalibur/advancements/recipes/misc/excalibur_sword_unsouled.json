@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_excalibur": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excalibur:avalonian_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excalibur:excalibur_sword_unsouled"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_excalibur",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excalibur:excalibur_sword_unsouled"
+    ]
+  },
+  "sends_telemetry_event": false
+}

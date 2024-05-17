@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "excalibur:avalonian_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  A",
+    " A ",
+    "S  "
+  ],
+  "result": {
+    "item": "excalibur:excalibur_sword_unsouled"
+  },
+  "show_notification": true
+}

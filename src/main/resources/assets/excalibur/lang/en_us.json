@@ -1,0 +1,17 @@
+{
+
+  "item.excalibur.excalibur_sword": "Excalibur Sword",
+  "item.excalibur.excalibur_sword_unsouled": "Excalibur Sword (Unsouled)",
+  "item.excalibur.avalonian_ingot": "Avalonian Ingot",
+  "item.excalibur.avalonian_nugget": "Avalonian Nugget",
+
+  "item.excalibur.nimue_heart": "Nimue's Heart",
+  "item.excalibur.nimue_soul": "Nimue´s Soul",
+
+  "block.excalibur.avalonian_block": "Avalonian Block",
+  "block.excalibur.avalonian_ore": "Avalonian Ore",
+  "block.excalibur.deepslate_avalonian_ore": "Deepslate Avalonian Ore",
+  "block.excalibur.raw_avalonian_block": "Raw Avalonian Block",
+
+  "creativetab.excalibur_tab": "Excalibur Tab"
+}
