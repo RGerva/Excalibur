@@ -33,6 +33,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.AVALONIAN_ORE.get(),
                         ModBlocks.DEEPSLATE_AVALONIAN_ORE.get(),
                         ModBlocks.RAW_AVALONIAN_BLOCK.get());
+
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .addTag(BlockTags.MINEABLE_WITH_AXE);
     }
 
     @Override

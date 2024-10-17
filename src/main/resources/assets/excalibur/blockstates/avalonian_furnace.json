@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=north,lit=false": { "model": "excalibur:block/avalonian_furnace", "uvlock": true },
+        "facing=south,lit=false": { "model": "excalibur:block/avalonian_furnace", "uvlock": true, "y": 180 },
+        "facing=west,lit=false":  { "model": "excalibur:block/avalonian_furnace", "uvlock": true, "y": 270 },
+        "facing=east,lit=false":  { "model": "excalibur:block/avalonian_furnace", "uvlock": true, "y": 90 },
+        "facing=north,lit=true": { "model": "excalibur:block/avalonian_furnace_on", "uvlock": true },
+        "facing=south,lit=true": { "model": "excalibur:block/avalonian_furnace_on", "uvlock": true, "y": 180 },
+        "facing=west,lit=true":  { "model": "excalibur:block/avalonian_furnace_on", "uvlock": true, "y": 270 },
+        "facing=east,lit=true":  { "model": "excalibur:block/avalonian_furnace_on", "uvlock": true, "y": 90 }
+    }
+}

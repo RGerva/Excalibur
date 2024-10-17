@@ -1,11 +1,13 @@
 package net.banze.excalibur.block;
 
 import net.banze.excalibur.ExcaliburMod;
+import net.banze.excalibur.block.custom.AvalonianFurnaceBlock;
 import net.banze.excalibur.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,6 +32,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_AVALONIAN_BLOCK = registerBlock("raw_avalonian_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)));
 
+    public static final RegistryObject<Block> AVALONIAN_FURNACE = registerBlock("avalonian_furnace",
+            () -> new AvalonianFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.FURNACE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

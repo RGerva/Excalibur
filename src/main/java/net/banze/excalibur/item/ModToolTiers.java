@@ -21,4 +21,10 @@ public class ModToolTiers {
             new ForgeTier(1, 15000, 1, 0F, 1,
                     ModTags.Blocks.NEEDS_EXCALIBUR_TOOL, ()-> Ingredient.of(ModItems.AVALONIAN_INGOT.get())),
             new ResourceLocation(ExcaliburMod.MOD_ID,"excalibur_unsouled"), List.of(Tiers.STONE), List.of());
+
+    public static final Tier AVALONIAN_TIER = TierSortingRegistry.registerTier(
+            new ForgeTier(5, 15000, 1, 1F, 50,
+                    ModTags.Blocks.NEEDS_EXCALIBUR_TOOL, ()-> Ingredient.of(ModItems.AVALONIAN_INGOT.get())),
+            new ResourceLocation(ExcaliburMod.MOD_ID,"avalonian_tools"), List.of(Tiers.NETHERITE), List.of());
+
 }

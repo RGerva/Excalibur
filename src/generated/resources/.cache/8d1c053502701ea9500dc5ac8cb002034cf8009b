@@ -1,7 +1,15 @@
-// 1.20.1	2024-05-17T12:44:58.307916	Item Models: excalibur
+// 1.20.1	2024-05-23T15:22:59.5231699	Item Models: excalibur
+6fcbb52ca249c940a256f914e12efb618caf7f46 assets/excalibur/models/item/avalonian_axe.json
+77621543e919a607aa28b3595cf48e2e8f33ea98 assets/excalibur/models/item/avalonian_hammer.json
+77653b71c533f788d6ea6bfac4cbe297f3734669 assets/excalibur/models/item/avalonian_hoe.json
 502dae0db6e566f3a07c3a024574a3fb280967a4 assets/excalibur/models/item/avalonian_ingot.json
 aa86d953341351a606a7066f6becf52d2fb8c7d9 assets/excalibur/models/item/avalonian_nugget.json
+643fdf54fdda2ab262ca5b05ded88199b5afc963 assets/excalibur/models/item/avalonian_paxel.json
+45723217e942ecf6b357bb96f400a8985e545325 assets/excalibur/models/item/avalonian_pickaxe.json
+a1f8803180eead280dc2af798257095990fef323 assets/excalibur/models/item/avalonian_shovel.json
+835a08d21dfb2cfcb797ec7650e109396c3556c4 assets/excalibur/models/item/avalonian_upgrade_smithing_template.json
 94f123a0a74ca9798f75812b7d9d37985340b4fd assets/excalibur/models/item/excalibur_sword.json
 97822605e94e2481db227bd2de25d62b06a3d979 assets/excalibur/models/item/excalibur_sword_unsouled.json
 42735c7724cff5042989fe9cd7217e217c98d228 assets/excalibur/models/item/nimue_heart.json
 0b38f9be8e2e2e9f909e67256604003d2a437684 assets/excalibur/models/item/nimue_soul.json
+4f02b2df3335c75d2d84b6cda33f3efb488b7829 assets/excalibur/models/item/raw_avalonian.json

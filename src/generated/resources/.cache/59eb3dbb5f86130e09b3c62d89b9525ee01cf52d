@@ -1,5 +1,6 @@
-// 1.20.1	2024-05-17T10:04:13.4031203	Loot Tables
+// 1.20.1	2024-05-24T14:57:49.7548705	Loot Tables
 41a6633288aeb592087ca9ab6e88ae6d659fb1be data/excalibur/loot_tables/blocks/avalonian_block.json
-344dcc0af984865307cdd0f7d8de07a2d799dffa data/excalibur/loot_tables/blocks/avalonian_ore.json
-acfe4328ab899c5f5f7ba558036f8867edc4908c data/excalibur/loot_tables/blocks/deepslate_avalonian_ore.json
+ba44fc2033d6d141e7d7fce0d7fa1fb692dd58e5 data/excalibur/loot_tables/blocks/avalonian_furnace.json
+8b424a70df73fb6662cbb8826b2ca85404644d40 data/excalibur/loot_tables/blocks/avalonian_ore.json
+77bd7ed1312a5e2bf9234efcfd9e7567c54825bb data/excalibur/loot_tables/blocks/deepslate_avalonian_ore.json
 134b92d59cbcdad6e46adf4171d768f4a11dd567 data/excalibur/loot_tables/blocks/raw_avalonian_block.json

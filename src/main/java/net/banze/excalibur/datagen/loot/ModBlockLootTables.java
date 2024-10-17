@@ -22,12 +22,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.AVALONIAN_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_AVALONIAN_BLOCK.get());
+        this.dropSelf(ModBlocks.AVALONIAN_FURNACE.get());
 
         this.add(ModBlocks.AVALONIAN_ORE.get(),
-                block -> createOreDrop(ModBlocks.AVALONIAN_ORE.get(), ModItems.AVALONIAN_NUGGET.get()));
+                block -> createOreDrop(ModBlocks.AVALONIAN_ORE.get(), ModItems.RAW_AVALONIAN.get()));
 
         this.add(ModBlocks.DEEPSLATE_AVALONIAN_ORE.get(),
-                block -> createOreDrop(ModBlocks.DEEPSLATE_AVALONIAN_ORE.get(), ModItems.AVALONIAN_NUGGET.get()));
+                block -> createOreDrop(ModBlocks.DEEPSLATE_AVALONIAN_ORE.get(), ModItems.RAW_AVALONIAN.get()));
 
     }
 

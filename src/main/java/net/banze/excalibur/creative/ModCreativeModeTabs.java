@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.AVALONIAN_INGOT.get());
                         output.accept(ModItems.AVALONIAN_NUGGET.get());
+                        output.accept(ModItems.RAW_AVALONIAN.get());
 
                         output.accept(ModBlocks.AVALONIAN_BLOCK.get());
                         output.accept(ModBlocks.AVALONIAN_ORE.get());
@@ -30,6 +31,18 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.NIMUE_HEART.get());
                         output.accept(ModItems.NIMUE_SOUL.get());
+
+                        output.accept(ModItems.AVALONIAN_SMITHING.get());
+
+                        output.accept(ModItems.AVALONIAN_AXE.get());
+                        output.accept(ModItems.AVALONIAN_HOE.get());
+                        output.accept(ModItems.AVALONIAN_PICKAXE.get());
+                        output.accept(ModItems.AVALONIAN_SHOVEL.get());
+
+                        output.accept(ModItems.AVALONIAN_HAMMER.get());
+                        output.accept(ModItems.AVALONIAN_PAXEL.get());
+
+                        output.accept(ModBlocks.AVALONIAN_FURNACE.get());
 
                         output.accept(ModItems.EXCALIBUR_SWORD_UNSOULED.get());
                         output.accept(ModItems.EXCALIBUR_SWORD.get());

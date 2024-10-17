@@ -15,6 +15,7 @@ import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -44,9 +45,20 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.AVALONIAN_INGOT);
         simpleItem(ModItems.AVALONIAN_NUGGET);
+        simpleItem(ModItems.RAW_AVALONIAN);
 
         simpleItem(ModItems.NIMUE_HEART);
         simpleItem(ModItems.NIMUE_SOUL);
+
+        handheldItem(ModItems.AVALONIAN_SMITHING);
+
+        handheldItem(ModItems.AVALONIAN_AXE);
+        handheldItem(ModItems.AVALONIAN_HOE);
+        handheldItem(ModItems.AVALONIAN_PICKAXE);
+        handheldItem(ModItems.AVALONIAN_SHOVEL);
+
+        handheldItem(ModItems.AVALONIAN_HAMMER);
+        handheldItem(ModItems.AVALONIAN_PAXEL);
 
         handheldItem(ModItems.EXCALIBUR_SWORD_UNSOULED);
         handheldItem(ModItems.EXCALIBUR_SWORD);

@@ -26,6 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.AVALONIAN_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_AVALONIAN_ORE);
         blockWithItem(ModBlocks.RAW_AVALONIAN_BLOCK);
+        //blockWithItem(ModBlocks.AVALONIAN_FURNACE);
     }
 
 //    public void makeCrop(CropBlock block, String modelName, String textureName) {
@@ -57,10 +58,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //    }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("mccourse:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("excalibur:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("mccourse:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("excalibur:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
